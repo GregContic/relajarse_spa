@@ -6,7 +6,7 @@ function SerenitySpaLogo() {
   return (
     <div className="flex items-center space-x-4">
       <div className="relative">
-        <svg
+  <svg
           width="44"
           height="44"
           viewBox="0 0 40 40"
@@ -20,29 +20,24 @@ function SerenitySpaLogo() {
             r="18"
             stroke="currentColor"
             strokeWidth="1.5"
-            className="text-primary/30"
           />
 
           {/* Lotus petals */}
           <path
             d="M20 8C22.5 10 24 13 24 16C24 19 22.5 22 20 24C17.5 22 16 19 16 16C16 13 17.5 10 20 8Z"
             fill="currentColor"
-            className="text-primary/60"
           />
           <path
             d="M32 20C30 17.5 27 16 24 16C21 16 18 17.5 16 20C18 22.5 21 24 24 24C27 24 30 22.5 32 20Z"
             fill="currentColor"
-            className="text-primary/40"
           />
           <path
             d="M20 32C17.5 30 16 27 16 24C16 21 17.5 18 20 16C22.5 18 24 21 24 24C24 27 22.5 30 20 32Z"
             fill="currentColor"
-            className="text-primary/60"
           />
           <path
             d="M8 20C10 22.5 13 24 16 24C19 24 22 22.5 24 20C22 17.5 19 16 16 16C13 16 10 17.5 8 20Z"
             fill="currentColor"
-            className="text-primary/40"
           />
 
           {/* Center circle representing inner peace */}
@@ -51,7 +46,6 @@ function SerenitySpaLogo() {
             cy="20"
             r="4"
             fill="currentColor"
-            className="text-primary"
           />
         </svg>
       </div>
@@ -89,7 +83,7 @@ export function Header() {
 
   return (
     <>
-  <header className="fixed top-0 left-0 right-0 z-50 bg-offwhite/95 backdrop-blur-sm border-b border-border">
+  <header className="fixed top-0 left-0 right-0 z-50 bg-offwhite/95 backdrop-blur-sm border-b border-border" style={{ color: '#FAF9F6' }}>
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <SerenitySpaLogo />
 
@@ -109,7 +103,8 @@ export function Header() {
           <div className="flex items-center space-x-4">
             <Button
               size="sm"
-              className="bg-primary hover:bg-primary/90 transition-colors"
+              className="transition-colors hover:brightness-95"
+              style={{ backgroundColor: '#3C4C37', color: '#FAF9F6' }}
             >
               Book Now
             </Button>
@@ -136,7 +131,7 @@ export function Header() {
             className="fixed inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
           />
-          <div className="fixed right-0 top-0 h-full w-64 bg-offwhite shadow-xl">
+          <div className="fixed right-0 top-0 h-full w-64 bg-offwhite shadow-xl" style={{ color: '#FAF9F6' }}>
             <div className="flex flex-col p-6 pt-20">
               {navItems.map((item) => (
                 <button
@@ -157,8 +152,9 @@ export function Header() {
                   <span>(555) 123-4567</span>
                 </Button>
                 <Button
-                  className="w-full bg-primary hover:bg-primary/90"
+                  className="w-full hover:brightness-95"
                   onClick={() => setMobileMenuOpen(false)}
+                  style={{ backgroundColor: '#3C4C37', color: '#FAF9F6' }}
                 >
                   Book Now
                 </Button>

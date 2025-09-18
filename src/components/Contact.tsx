@@ -1,8 +1,12 @@
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export function Contact() {
+  const left = useScrollReveal();
+  const right = useScrollReveal();
+
   return (
     <section id="contact" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -14,7 +18,7 @@ export function Contact() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          <div>
+          <div ref={left.ref as any} className={`reveal reveal--left ${left.inView ? 'is-revealed' : ''}`}>
             <Card className="mb-8">
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
@@ -93,10 +97,10 @@ export function Contact() {
             </p>
             
             <div className="space-y-4">
-              <Button size="lg" className="w-full">
+              <Button size="lg" className="w-full" style={{ backgroundColor: '#3C4C37', color: '#FAF9F6' }}>
                 Book Online Now
               </Button>
-              <Button variant="outline" size="lg" className="w-full">
+              <Button variant="outline" size="lg" className="w-full" style={{ color: '#3C4C37', borderColor: '#3C4C37' }}>
                 Call to Schedule
               </Button>
             </div>
